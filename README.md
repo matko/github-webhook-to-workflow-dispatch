@@ -32,3 +32,9 @@ for the standalone, or
 ```
 docker run -p <port>:<port> --env-file <your env file> <whatever docker load spit out>
 ```
+
+## Running without Nix
+Ensure you have SWI-Prolog installed, and have the environment variables in .env set. Then,
+```
+prolog/github-webhook-to-workflow-dispatch.pl
+```

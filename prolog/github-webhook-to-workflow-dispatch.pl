@@ -43,7 +43,7 @@ handler(Request) :-
     do_or_die(format(atom(ProvidedHash), "sha256=~s", [HmacHex]),
               "Hash invalid"),
     open_string(Data, Stream),
-    do_or_die(catch(json_read_dict(Stream, Json, [default_tag(json)]),
+    do_or_die(catch(json_read_dict(Stream, _Json, [default_tag(json)]),
                     error(syntax_error(json(_)),_),
                     fail),
               "Invalid json"),
