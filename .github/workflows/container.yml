@@ -16,4 +16,5 @@ jobs:
     - name: Upload container
       uses: actions/upload-artifact@v4
       with:
+        name: container
         path: container.tar.gz
