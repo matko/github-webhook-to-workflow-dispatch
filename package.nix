@@ -1,7 +1,8 @@
 {
   stdenv,
   stdenvNoCC,
-  swiProlog
+  swiProlog,
+  cacert
 }:
 stdenvNoCC.mkDerivation (attrs: {
   name = "hook-to-workflow-dispatch";
