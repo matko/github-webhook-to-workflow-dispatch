@@ -5,14 +5,14 @@
   cacert
 }:
 stdenvNoCC.mkDerivation (attrs: {
-  name = "hook-to-workflow-dispatch";
+  name = "github-webhook-to-workflow-dispatch";
   buildInputs = [
     swiProlog
   ];
   src = ./.;
 
   buildPhase = ''
-swipl -o ${attrs.name} -c handle_hook.pl
+swipl -o ${attrs.name} -c github-webhook-to-workflow-dispatch.pl
 '';
 
   installPhase = ''
