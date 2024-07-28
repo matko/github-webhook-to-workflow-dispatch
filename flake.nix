@@ -35,9 +35,9 @@
       in
       {
         packages = rec {
-          default = pkgs.callPackage ./package.nix {inherit swiProlog;};
+          default = pkgs.callPackage ./nix/package.nix {inherit swiProlog;};
           inherit swiProlog;
-          container = pkgs.callPackage ./container.nix {
+          container = pkgs.callPackage ./nix/container.nix {
             hook = default;
           };
         };
