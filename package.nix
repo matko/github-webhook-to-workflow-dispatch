@@ -9,7 +9,7 @@ stdenvNoCC.mkDerivation (attrs: {
   buildInputs = [
     swiProlog
   ];
-  src = ./.;
+  src = ./prolog;
 
   buildPhase = ''
 swipl -o ${attrs.name} -c github-webhook-to-workflow-dispatch.pl
